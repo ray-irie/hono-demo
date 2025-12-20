@@ -16,7 +16,7 @@ node_modules
 .pnpm-store
 
 # next.js
-/.next/
+front/.next/*
 /out/
 next-env.d.ts
 
@@ -35,5 +35,4 @@ lerna-debug.log*
 
 # misc
 .DS_Store
-
-/generated/prisma
+api/generated/prisma/*

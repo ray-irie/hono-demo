@@ -1,5 +1,4 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
     "composite": true,
     "moduleDetection": "force",
@@ -7,7 +6,8 @@
     "resolveJsonModule": true,
     "allowJs": true,
     "esModuleInterop": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "types": ["node"]
   },
-  "include": ["scripts/**/*.ts"]
+  "include": ["**/*.ts"]
 }

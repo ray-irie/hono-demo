@@ -17,6 +17,9 @@ importers:
       '@hono/node-server':
         specifier: ^1.19.6
         version: 1.19.7(hono@4.11.1)
+      '@hono/zod-validator':
+        specifier: ^0.7.6
+        version: 0.7.6(hono@4.11.1)(zod@4.2.1)
       '@prisma/adapter-mariadb':
         specifier: ^7.2.0
         version: 7.2.0
@@ -48,6 +51,12 @@ importers:
 
   front:
     dependencies:
+      '@hono/client':
+        specifier: ^0.0.3
+        version: 0.0.3
+      hono:
+        specifier: ^4.11.1
+        version: 4.11.1
       next:
         specifier: ^16.1.0
         version: 16.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -255,6 +264,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@hono/client@0.0.3':
+    resolution: {integrity: sha512-1TrYdppLelv39uCqevePjKUeyf4AoKYWQ+/qfNtRzY8OPBur78XA1Gtv3Pi08uXT6GOuQN5fi3IFUwMsxnEhcQ==}
+    engines: {node: '>=18'}
+    deprecated: The client feature has been integrated into the Hono core. Please use hono/client instead.
+
   '@hono/node-server@1.19.6':
     resolution: {integrity: sha512-Shz/KjlIeAhfiuE93NDKVdZ7HdBVLQAfdbaXEaoAVO3ic9ibRSLGIQGkcBbFyuLr+7/1D5ZCINM8B+6IvXeMtw==}
     engines: {node: '>=18.14.1'}
@@ -266,6 +280,12 @@ packages:
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
+
+  '@hono/zod-validator@0.7.6':
+    resolution: {integrity: sha512-Io1B6d011Gj1KknV4rXYz4le5+5EubcWEU/speUjuw9XMMIaP3n78yXLhjd2A3PXaXaUwEAluOiAyLqhBEJgsw==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.25.0 || ^4.0.0
 
   '@img/colour@1.0.0':
     resolution: {integrity: sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw==}
@@ -992,6 +1012,9 @@ packages:
   zeptomatch@2.0.2:
     resolution: {integrity: sha512-H33jtSKf8Ijtb5BW6wua3G5DhnFjbFML36eFu+VdOoVY4HD9e7ggjqdM6639B+L87rjnR6Y+XeRzBXZdy52B/g==}
 
+  zod@4.2.1:
+    resolution: {integrity: sha512-0wZ1IRqGGhMP76gLqz8EyfBXKk0J2qo2+H3fi4mcUP/KtTocoX08nmIAHl1Z2kJIZbZee8KOpBCSNPRgauucjw==}
+
 snapshots:
 
   '@chevrotain/cst-dts-gen@10.5.0':
@@ -1102,6 +1125,8 @@ snapshots:
   '@esbuild/win32-x64@0.27.2':
     optional: true
 
+  '@hono/client@0.0.3': {}
+
   '@hono/node-server@1.19.6(hono@4.10.6)':
     dependencies:
       hono: 4.10.6
@@ -1109,6 +1134,11 @@ snapshots:
   '@hono/node-server@1.19.7(hono@4.11.1)':
     dependencies:
       hono: 4.11.1
+
+  '@hono/zod-validator@0.7.6(hono@4.11.1)(zod@4.2.1)':
+    dependencies:
+      hono: 4.11.1
+      zod: 4.2.1
 
   '@img/colour@1.0.0':
     optional: true
@@ -1797,3 +1827,5 @@ snapshots:
   zeptomatch@2.0.2:
     dependencies:
       grammex: 3.1.12
+
+  zod@4.2.1: {}
