@@ -1,13 +1,16 @@
+# ローカル環境の起動
 ```
 pnpm dev
 ```
 
-```
-npx prisma db seed
-```
-
+# Prisma
+初回、マイグレーション時
 ```
 npx prisma migrate dev --name init
+```
+シーディング（v6まではマイグレーション時に自動で走っていたがv7からは手動必須になった）
+```
+npx prisma db seed
 ```
 
 ```
