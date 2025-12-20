@@ -16,8 +16,8 @@ node_modules
 .pnpm-store
 
 # next.js
-front/.next/*
-/out/
+.next
+out
 next-env.d.ts
 
 # env
