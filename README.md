@@ -11,7 +11,7 @@ VSCodeでプロジェクトをひらけば自動で（もしくはコマンド�
 ```
 pnpm dev
 ```
-ローカル環境のビルドは各フレームワークのdevコマンドをそのまま使用しているだけなので、Dockerfileは現状無関係です。
+ローカル環境での各種ビルドは各フレームワークのdevコマンドをそのまま使用しているだけなので、Dockerfileは現状無関係です。
 
 # Prisma
 https://www.prisma.io/docs/getting-started/prisma-orm/quickstart/mysql
