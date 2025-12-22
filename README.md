@@ -1,7 +1,7 @@
 # ローカル環境の起動
 ## 開発環境の起動
 VSCodeの拡張、[DevContainers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)をインストールしてください。
-VSCodeでプロジェクトをひらけば自動でローカルコンテナが起動します。
+VSCodeでプロジェクトをひらけば自動で（もしくはコマンドパレットからReopen in containerを実行）ローカルコンテナが起動します。
 これによりpnpmなどのツールを個人の環境に依存せずに利用できます。
 コンテナを起動しない状態で各種コマンドを実行しないでください。
 
