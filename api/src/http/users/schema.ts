@@ -8,5 +8,5 @@ export const GetUserInputSchema = z.object({
 // postUser
 export const PostUserInputSchema = z.object({
   name: z.string().min(1),
-  age: z.coerce.number().int().positive(),
+  email: z.string().min(1),
 });

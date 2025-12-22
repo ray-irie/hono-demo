@@ -1,13 +1,13 @@
 import { Hono } from "hono";
-import * as z from "zod";
 import { prisma } from "../../../prisma/prisma";
 import { PrismaUserRepository } from "../../infrastructure/user.repository";
 import { GetUserUseCase } from "../../usecase/user/get-user.usecase";
-import { zValidator } from "@hono/zod-validator";
 import { GetUserInputSchema, PostUserInputSchema } from "./schema";
+import { CreateUserUseCase } from "../../usecase/user/create-user.usecase";
 
 const userRepository = new PrismaUserRepository(prisma);
 const getUserUseCase = new GetUserUseCase(userRepository);
+const createUserUseCase = new CreateUserUseCase(userRepository)
 
 const app = new Hono()
   .get("/:id", async (c) => {
@@ -23,7 +23,10 @@ const app = new Hono()
     return c.json(user);
   })
   .post("/", async (c) => {
-    const { body } = PostUserInputSchema.parse(c.req.parseBody);
+    const { name, email } = PostUserInputSchema.parse(c.req.parseBody);
+    const user = await createUserUseCase.execute({name: name, email: email})
+
+    return c.json(user);
   });
 
 export default app;
