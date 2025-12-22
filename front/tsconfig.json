@@ -18,7 +18,7 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "paths": {
-      "api": ["../api/src/index.ts"]
+      "api": ["../api/src/routes.ts"]
     },
     "plugins": [
       {

@@ -5,7 +5,11 @@ export default async function Page() {
 
   const client = hc<AppType>('http://localhost:3001');
   
-  const userRes = await client.user[":id"].$get({ param: { id: "1" } });
+  const userRes = await client.users[":id"].$get({
+    param: {
+      id: "1",
+    }
+  })
   
   if (userRes.ok) {
     const user = await userRes.json();
